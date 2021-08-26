@@ -3,9 +3,9 @@
  *
  *  Created on: 26-Aug-2021
  *      Author: MAHESH
- *
+ * 
  */
-#include<stm32f4xxx.h>
+#include<stm32f4xx.h> 
 void PWM_Setup(void);
 float squre(float x);
 int main()
