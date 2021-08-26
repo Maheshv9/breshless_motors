@@ -3,6 +3,7 @@
  *
  *  Created on: 26-Aug-2021
  *      Author: MAHESH
+ *
  */
 #include<stm32f4xxx.h>
 void PWM_Setup(void);
@@ -13,10 +14,10 @@ int main()
 	PWM_Setup();
 	float k;
 
-	TIM2->CCR1 = 200;
-	Delay_ms(5000);
-	TIM2->CCR1 = 100;
-	Delay_ms(2000);
+	TIM2->CCR1 = 200; //ESC calibration
+	Delay_ms(5000);	// Wait 5 secs
+	TIM2->CCR1 = 100;// write 1mili sec
+	Delay_ms(2000);//wait 2 secs
 	while(1)
 	{
 		for(float i = -14.17; i<=14.17;i=i+0.23)
